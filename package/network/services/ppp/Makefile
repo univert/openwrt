@@ -187,6 +187,7 @@ define Package/ppp/install
 	$(INSTALL_DIR) $(1)/usr/lib/pppd/$(PKG_VERSION)
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/sbin/pppd $(1)/usr/sbin/
+	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/sbin/pppoe-discovery $(1)/usr/sbin/
 	$(INSTALL_DIR) $(1)/etc/ppp
 	$(INSTALL_CONF) ./files/etc/ppp/chap-secrets $(1)/etc/ppp/
 	$(INSTALL_DATA) ./files/etc/ppp/filter $(1)/etc/ppp/
